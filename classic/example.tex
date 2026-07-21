@@ -1,0 +1,228 @@
+\documentclass[10pt,aspectratio=169,mathserif]{beamer}
+\usepackage{jsu}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amsfonts,amssymb,bm}
+\usepackage{graphicx,hyperref,url}
+\usepackage{booktabs}
+
+\beamertemplateballitem
+
+% ============================================================
+% 基本信息（请按需修改）
+% ============================================================
+\title{演示文稿标题}
+\subtitle{副标题（可选）}
+
+\author[姓名]{
+    姓名\ 专业班级\\
+    学号：xxxxxxxxxx\\
+    {\small \url{https://github.com/your-username}}
+}
+
+\date{2026年X月}
+
+\begin{document}
+
+%% ------------------------------------------------------------
+%% 封面
+%% ------------------------------------------------------------
+\begin{frame}
+    \titlepage
+\end{frame}
+
+%% ------------------------------------------------------------
+%% 目录
+%% ------------------------------------------------------------
+\begin{frame}
+    \frametitle{目录}
+    \tableofcontents
+\end{frame}
+
+%% ------------------------------------------------------------
+%% 第一部分
+%% ------------------------------------------------------------
+\section{引言}
+
+\begin{frame}{研究背景}
+    \begin{itemize}
+        \item 在此处简述研究背景与动机
+        \item 指出当前工作中的关键问题
+        \item 说明本报告的主要内容与结构
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \begin{block}{核心问题}
+        用一两句话概括你要解决的核心问题。
+    \end{block}
+\end{frame}
+
+\begin{frame}{报告结构}
+    \begin{enumerate}
+        \item 引言与问题定义
+        \item 方法与技术路线
+        \item 实验结果与分析
+        \item 总结与展望
+    \end{enumerate}
+\end{frame}
+
+%% ------------------------------------------------------------
+%% 第二部分
+%% ------------------------------------------------------------
+\section{方法}
+
+\begin{frame}{技术路线}
+    \begin{columns}
+    \column{0.5\textwidth}
+    \textbf{主要步骤：}
+    \begin{itemize}
+        \item 数据准备与预处理
+        \item 模型设计与训练
+        \item 评估与对比分析
+        \item 结果可视化
+    \end{itemize}
+
+    \column{0.5\textwidth}
+    \begin{block}{输入}
+        原始数据 / 问题描述
+    \end{block}
+    \begin{exampleblock}{输出}
+        结论 / 系统 / 可视化结果
+    \end{exampleblock}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{两栏布局示例}
+    \begin{columns}[T]
+    \column{0.48\textwidth}
+    \textbf{左侧要点}
+    \begin{itemize}
+        \item 条目 A
+        \item 条目 B
+        \item 条目 C
+    \end{itemize}
+
+    \column{0.48\textwidth}
+    \textbf{右侧要点}
+    \begin{itemize}
+        \item 条目 D
+        \item 条目 E
+        \item 条目 F
+    \end{itemize}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{公式示例}
+    最小二乘目标函数：
+    \[
+        \min_{\mathbf{w}} \;
+        \frac{1}{2n}\sum_{i=1}^{n}
+        \bigl(y_i - \mathbf{w}^{\mathsf{T}}\mathbf{x}_i\bigr)^{2}
+        + \frac{\lambda}{2}\|\mathbf{w}\|_{2}^{2}
+    \]
+
+    \vspace{0.4cm}
+    贝叶斯公式：
+    \[
+        P(\theta\mid D)
+        = \frac{P(D\mid\theta)\,P(\theta)}{P(D)}
+    \]
+\end{frame}
+
+%% ------------------------------------------------------------
+%% 第三部分
+%% ------------------------------------------------------------
+\section{结果}
+
+\begin{frame}{表格示例}
+\begin{table}
+\centering
+\begin{tabular}{lccc}
+\toprule
+\textbf{方法} & \textbf{指标 A} & \textbf{指标 B} & \textbf{耗时 (s)} \\
+\midrule
+Baseline     & 0.72 & 0.68 & 12.3 \\
+Method A     & 0.81 & 0.79 & 15.6 \\
+Method B     & 0.85 & 0.83 & 18.1 \\
+\textbf{Ours}& \textbf{0.89} & \textbf{0.87} & 14.2 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\vspace{0.4cm}
+\begin{center}
+\small\textit{表注：示例数据，请替换为实际实验结果。}
+\end{center}
+\end{frame}
+
+\begin{frame}{强调块示例}
+    \begin{block}{普通块（Block）}
+        用于说明一般性内容或定义。
+    \end{block}
+
+    \begin{alertblock}{警告块（Alert）}
+        用于突出需要注意的重要信息。
+    \end{alertblock}
+
+    \begin{exampleblock}{示例块（Example）}
+        用于展示例子、结果或可复用片段。
+    \end{exampleblock}
+\end{frame}
+
+\begin{frame}{图片占位}
+    \begin{center}
+        % 将图片放入 images/ 目录后取消注释：
+        % \includegraphics[width=0.7\textwidth]{images/your-figure.png}
+        \fbox{\parbox{0.7\textwidth}{\centering\vspace{2.5cm}
+        在此插入图片\\[0.3cm]
+        {\small\texttt{\textbackslash includegraphics[...]\{images/xxx.png\}}}
+        \vspace{2.5cm}}}
+    \end{center}
+\end{frame}
+
+%% ------------------------------------------------------------
+%% 第四部分
+%% ------------------------------------------------------------
+\section{总结}
+
+\begin{frame}{工作总结}
+    \begin{itemize}
+        \item 完成了……
+        \item 验证了……
+        \item 相比基线提升了……
+    \end{itemize}
+
+    \vspace{0.5cm}
+    \begin{block}{主要贡献}
+        \begin{enumerate}
+            \item 贡献一
+            \item 贡献二
+            \item 贡献三
+        \end{enumerate}
+    \end{block}
+\end{frame}
+
+\begin{frame}{展望}
+    \begin{itemize}
+        \item 扩展到更大规模数据集
+        \item 探索更高效的实现方式
+        \item 与实际应用场景进一步结合
+    \end{itemize}
+\end{frame}
+
+%% ------------------------------------------------------------
+%% 致谢
+%% ------------------------------------------------------------
+\section*{}
+
+\begin{frame}
+    \vfill
+    \centering
+    \Huge\textbf{感谢聆听}
+
+    \vspace{1cm}
+
+    \Large 欢迎提问与交流
+    \vfill
+\end{frame}
+
+\end{document}

@@ -1,179 +1,67 @@
-# Jiangsu University Beamer Template
+# Jiangsu University Beamer Templates
 
 English | [简体中文](README.md)
 
-This is a Beamer presentation template I created for the mid-term project defense of the "Embedded Application Development" course in the first semester of my sophomore year. It is modified based on the [Nanjing University Software Institute Beamer Template](https://github.com/EagleBear2002/NJUSE-Beamer-Template). There are many areas that need improvement, especially the color scheme which hasn't been well-adjusted yet, resulting in average visual appearance. Contributions and improvements are warmly welcome!
+LaTeX Beamer templates for Jiangsu University, in two styles.
 
-A LaTeX Beamer template for Jiangsu University academic presentations, suitable for course defenses, academic reports, project demonstrations, etc.
+| Style | Folder | Look | Best for |
+|-------|--------|------|----------|
+| **Classic** | [`classic/`](classic/) | Top navigation, college footer, watermark | Course defenses, routine talks |
+| **Modern** | [`modern/`](modern/) | Full-bleed title page, clean body slides | Showcase openings, demos |
 
-## Features
+## Preview
 
-- Jiangsu University official visual identity system
-- Clear top navigation bar (with university name logo and emblem)
-- Green theme color (Jiangsu University standard color)
-- Support for Chinese and English mixed typesetting
-- 16:9 widescreen aspect ratio
-- Clean and elegant page layout
+### Classic
 
-## Directory Structure
+| Title | Content |
+|:---:|:---:|
+| ![Classic title](classic/gallery/title.png) | ![Classic content](classic/gallery/method.png) |
 
-```
-.
-├── jsu.sty                          # Jiangsu University Beamer style file
-├── jsu_resources/                   # Template resource folder
-│   ├── jsulogo.pdf                  # Jiangsu University emblem
-│   ├── jsuname.png                  # Jiangsu University name (Chinese & English)
-│   └── jsubackground.pdf            # Background image
-├── example.tex                      # Example template file
-├── JSU-Beamer-UniTrack.tex         # Original project example (for reference)
-└── README.md                        # Documentation
-```
+[More images](classic/gallery/) · [Sample PDF](classic/example.pdf)
+
+### Modern
+
+| Title |
+|:---:|
+| ![Modern title](modern/gallery/title.png) |
+
+[Sample PDF](modern/example.pdf)
 
 ## Quick Start
 
-### Requirements
-
-- TeX Distribution: TeX Live (recommended) or MiKTeX
-- Compiler: XeLaTeX (required for Chinese support)
-- Editor: TeXstudio, VS Code + LaTeX Workshop, etc.
-
-### Compilation
-
-Using XeLaTeX (recommended):
-
 ```bash
+cd classic
 xelatex example.tex
-xelatex example.tex  # Compile twice to generate correct TOC and references
+xelatex example.tex
+
+cd modern
+xelatex example.tex
+xelatex example.tex
 ```
 
-Or using latexmk for automatic compilation:
+**XeLaTeX** is required for Chinese. See each style folder’s README for details.
 
-```bash
-latexmk -xelatex example.tex
+## Layout
+
+```
+.
+├── classic/     # nav-bar style
+├── modern/      # full-bleed title style
+├── LICENSE
+└── README.md
 ```
 
-### Usage
+## Credits
 
-1. **Copy the example file**
-   ```bash
-   cp example.tex my-presentation.tex
-   ```
-
-2. **Modify basic information**
-
-   In `my-presentation.tex`, update the following:
-
-   ```latex
-   \title{Your Presentation Title}
-   \author[Name]{
-       Name\ Major \& Class\\
-       Student ID: xxxxxxxxxx\\
-       {\small \url{https://github.com/your-username}}
-   }
-   \date{Month Year}
-   ```
-
-3. **Add content**
-
-   Use `\section{}` to create sections, and `\begin{frame}...\end{frame}` to create slides.
-
-4. **Compile to PDF**
-
-   Compile twice with XeLaTeX to generate the final PDF.
-
-## Common Features
-
-### Create title page
-
-```latex
-\begin{frame}
-    \titlepage
-\end{frame}
-```
-
-### Create table of contents
-
-```latex
-\begin{frame}
-    \frametitle{Contents}
-    \tableofcontents
-\end{frame}
-```
-
-### Create regular frame
-
-```latex
-\begin{frame}{Frame Title}
-    Frame content
-\end{frame}
-```
-
-### Two-column layout
-
-```latex
-\begin{frame}{Two-column Example}
-    \begin{columns}
-    \column{0.5\textwidth}
-    Left content
-
-    \column{0.5\textwidth}
-    Right content
-    \end{columns}
-\end{frame}
-```
-
-### Lists
-
-```latex
-% Unordered list
-\begin{itemize}
-    \item First item
-    \item Second item
-\end{itemize}
-
-% Ordered list
-\begin{enumerate}
-    \item First item
-    \item Second item
-\end{enumerate}
-```
-
-### Insert images
-
-```latex
-\begin{frame}{Image Example}
-    \begin{center}
-    \includegraphics[width=0.6\textwidth]{images/example.png}
-    \end{center}
-\end{frame}
-```
-
-### Emphasis blocks
-
-```latex
-\begin{block}{Title}
-    Content
-\end{block}
-
-\begin{alertblock}{Alert}
-    Important content
-\end{alertblock}
-
-\begin{exampleblock}{Example}
-    Example content
-\end{exampleblock}
-```
-
-## Contributing
-
-If you have any questions or suggestions, feel free to submit an Issue or Pull Request.
+- Classic is adapted from the [NJUSE Beamer Template](https://github.com/EagleBear2002/NJUSE-Beamer-Template).
+- Modern is adapted from [SINTEF Presentation](https://www.overleaf.com/latex/templates/sintef-presentation/jhbhdffczpnx) and [college-beamer](https://github.com/liu-qilong/college-beamer).
 
 ## License
 
-This template follows the MIT License and can be freely used and modified.
+[MIT License](LICENSE). Please keep the credits above when using the Modern style.
 
 ---
 
-**Author**: Xu Yibo, Communication 2402
-**Institution**: Jiangsu University
-**Last Updated**: November 2025
+**Author**: Xu Yibo  
+**Institution**: Jiangsu University  
+**Updated**: July 2026
